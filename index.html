@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to your compiled Tailwind CSS -->
+  <link href="dist/dist.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode"
+    rel="stylesheet" />
+  <title>Login | ISIS | Intergrated Station Information System</title>
+</head>
+
+<body>
+  <!-- Theme Mode -->
+  <button id="dark-mode-toggle">
+    <span id="dark-mode-icon" class="material-symbols-outlined">
+      dark_mode
+    </span>
+  </button>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <div class="wrapper-inner">
+      <!-- Brand -->
+      <div class="brand">
+        <div><img class="logo" src="logo.png" /></div>
+        <div>
+          <h1>ISIS</h1>
+          <h2>Intergrated Station</h2>
+          <h2>Information System</h2>
+        </div>
+      </div>
+      <hr>
+      <!-- Form -->
+      <form id="go" action="#" method="POST">
+        <h3>Login</h3>
+        <div class="form-item">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="off">
+        </div>
+        <div class="form-item">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="off">
+        </div>
+        <div class="pw-reset">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <!-- Links -->
+      <div class="link action">
+        <a href="#">Create Account</a>
+      </div>
+      <div class="link">
+        <a href="#">Training</a>
+      </div>
+      <div class="link">
+        <a href="#">Help</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <h4>Security Notification</h4>
+      <p>
+        You are entering an official electronic information system of the Corporation for Public Broadcasting (CPB),
+        which
+        may be used only by authorized users and for authorized purposes. CPB's electronic information resources are
+        the
+        property of CPB and are to be used solely for the purpose of conducting its business. Unauthorized attempts to
+        upload information and/or change information on this system are strictly prohibited and may result in criminal
+        prosecution. CPB may monitor or audit the usage of this system, and all persons are hereby notified that use
+        of
+        this system consititutes consent to such monitoring and auditing.
+      </p>
+    </div>
+  </footer>
+  <!-- Scripts for theme mode -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('dark-mode-toggle');
+      const icon = document.getElementById('dark-mode-icon');
+
+      if (!toggleButton || !icon) {
+        console.error("Dark mode button or icon not found!");
+        return;
+      }
+
+      function setDarkMode(isDark) {
+        document.documentElement.classList.toggle('dark', isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+        // Force Material Icon to update
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+        icon.style.display = "none";  // Force reflow
+        void icon.offsetWidth;        // Trigger a reflow (hack)
+        icon.style.display = "inline-block"; // Restore visibility
+      }
+
+      // Retrieve stored preference or use system preference
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDarkMode = storedTheme ? storedTheme === 'dark' : prefersDark;
+      setDarkMode(isDarkMode);
+
+      // Toggle dark mode on button click
+      toggleButton.addEventListener('click', () => {
+        setDarkMode(!document.documentElement.classList.contains('dark'));
+      });
+
+      // Auto-update theme if system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        setDarkMode(e.matches);
+      });
+    });
+  </script>
+</body>
+
+</html>

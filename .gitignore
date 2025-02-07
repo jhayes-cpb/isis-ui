@@ -1,0 +1,24 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore source files (if you don't need to commit these)
+src/
+
+# Ignore package configuration files (if you don't need them in your repo)
+package.json
+package-lock.json
+
+# OS generated files (macOS)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# OS generated files (macOS Spotlight & Trash)
+.Spotlight-V100
+.Trashes
+
+# OS generated files (Windows)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
