@@ -5,7 +5,7 @@ node_modules/
 src/
 
 # Ignore package configuration files (if you don't need them in your repo)
-package.json
+# package.json
 package-lock.json
 
 # OS generated files (macOS)
