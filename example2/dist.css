@@ -530,11 +530,16 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .flex-row {
-    flex-direction: row;
+  .flex-col {
+    flex-direction: column;
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
   }
 }
 .material-symbols-outlined {
