@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to your compiled Tailwind CSS -->
   <link href="dist.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,7 +113,7 @@
     </button>
   </div>
 
-  <!-- Your JavaScript functions -->
+  <!-- JavaScript functions -->
   <script>
     // Function to open the overlay
     function openOverlay() {
@@ -142,53 +141,8 @@
       }
     });
 
-    // You can call openOverlay() when you want to show the overlay,
-    // for example, after a button click or a certain event.
   </script>
 
-
-
-
-
-  <!-- Scripts for theme mode -->
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButton = document.getElementById('dark-mode-toggle');
-      const icon = document.getElementById('dark-mode-icon');
-
-      if (!toggleButton || !icon) {
-        console.error("Dark mode button or icon not found!");
-        return;
-      }
-
-      function setDarkMode(isDark) {
-        document.documentElement.classList.toggle('dark', isDark);
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
-        // Force Material Icon to update
-        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
-        icon.style.display = "none";  // Force reflow
-        void icon.offsetWidth;        // Trigger a reflow (hack)
-        icon.style.display = "inline-block"; // Restore visibility
-      }
-
-      // Retrieve stored preference or use system preference
-      const storedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDarkMode = storedTheme ? storedTheme === 'dark' : prefersDark;
-      setDarkMode(isDarkMode);
-
-      // Toggle dark mode on button click
-      toggleButton.addEventListener('click', () => {
-        setDarkMode(!document.documentElement.classList.contains('dark'));
-      });
-
-      // Auto-update theme if system preference changes
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        setDarkMode(e.matches);
-      });
-    });
-  </script> -->
 </body>
 
 </html>
