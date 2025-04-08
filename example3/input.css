@@ -20,11 +20,11 @@
 }
 
 .wrapper {
-  @apply container max-w-5xl mx-auto p-5 sm:p-10;
+  @apply container max-w-5xl mx-auto;
 }
 
-.message-wrapper {
-  @apply flex flex-col justify-center items-center h-auto md:h-screen;
+.wrapper-inner {
+  @apply flex flex-col justify-center items-center md:h-screen p-5 sm:p-10;
 
   .message {
     @apply flex-col justify-center items-center w-full mb-5;
@@ -132,10 +132,6 @@ button[type="submit"] {
   @apply text-green-700
 }
 
-#close {
-  font-size: 6rem;
-}
-
 #overlay {
   @apply absolute inset-0 justify-start md:justify-center items-start md:items-center bg-white z-50 h-screen;
 
@@ -144,11 +140,11 @@ button[type="submit"] {
   }
 
   h1 {
-    @apply text-6xl text-sky-700 dark:text-gray-200 text-left dark:border-gray-200 mb-10 font-extrabold;
+    @apply text-4xl md:text-6xl text-sky-700 dark:text-gray-200 text-left dark:border-gray-200 mb-10 font-extrabold pr-10 md:pr-0;
   }
 
   h2 {
-    @apply text-2xl text-gray-700 dark:text-gray-200 text-left mb-0;
+    @apply text-4xl text-gray-700 dark:text-gray-200 text-left mb-0;
   }
 
   p {
@@ -172,6 +168,10 @@ button[type="submit"] {
   }
 
   .close-button {
-    @apply absolute top-2 right-2 p-2 hover:cursor-pointer;
+    @apply absolute top-2 right-2 hover:cursor-pointer;
+
+    #close {
+      @apply text-5xl md:text-7xl;
+    }
   }
 }
