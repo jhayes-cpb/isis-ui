@@ -177,14 +177,14 @@ button[type="button"] {
 }
 
 .page {
-  @apply container mx-auto p-5 sm:p-10;
+  @apply container max-w-5xl mx-auto p-5 sm:p-10;
 
   h1 {
     @apply text-4xl text-gray-700 dark:text-gray-200 mb-3.5;
   }
 
   h2 {
-    @apply text-2xl text-gray-700 dark:text-gray-200 font-bold mb-3.5;
+    @apply text-2xl text-gray-700 dark:text-gray-200 font-bold mb-3.5 border-b-2 border-gray-200 dark:border-gray-500 pb-2;
   }
 
   h3 {
@@ -211,11 +211,44 @@ button[type="button"] {
     @apply text-gray-700 dark:text-gray-200;
   }
 
-  .step1-button {
+  .step1-button,
+  .step2-button {
     @apply w-auto;
   }
 
   ol {
     @apply list-decimal list-inside text-gray-700 dark:text-gray-200 ml-4;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      background-position: -700px 0;
+    }
+
+    100% {
+      background-position: 700px 0;
+    }
+  }
+
+  .loading-line {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-md relative overflow-hidden;
+  }
+
+  .loading-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
   }
 }
