@@ -112,7 +112,7 @@ input[type="password"] {
   @apply mb-4;
 }
 
-button[type="submit"] {
+button[type="button"] {
   @apply bg-sky-600 hover:bg-blue-700 cursor-pointer text-white font-semibold rounded-md py-2 px-4 w-full;
 }
 
@@ -173,5 +173,49 @@ button[type="submit"] {
     #close {
       @apply text-5xl md:text-7xl;
     }
+  }
+}
+
+.page {
+  @apply container mx-auto p-5 sm:p-10;
+
+  h1 {
+    @apply text-4xl text-gray-700 dark:text-gray-200 mb-3.5;
+  }
+
+  h2 {
+    @apply text-2xl text-gray-700 dark:text-gray-200 font-bold mb-3.5;
+  }
+
+  h3 {
+    @apply text-lg text-gray-700 dark:text-gray-200;
+  }
+
+  p {
+    @apply text-gray-700 dark:text-gray-200 mb-4;
+  }
+
+  ol {
+    @apply list-decimal list-inside text-gray-700 dark:text-gray-200;
+  }
+
+  ul {
+    @apply list-disc list-inside text-gray-700 dark:text-gray-200;
+  }
+
+  li {
+    @apply text-gray-700 dark:text-gray-200 mb-1;
+  }
+
+  a {
+    @apply text-gray-700 dark:text-gray-200;
+  }
+
+  .step1-button {
+    @apply w-auto;
+  }
+
+  ol {
+    @apply list-decimal list-inside text-gray-700 dark:text-gray-200 ml-4;
   }
 }

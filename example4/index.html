@@ -19,13 +19,6 @@
 <body>
   <div class="wrapper">
     <div class="wrapper-inner">
-      <div class="message">
-        <div class="message-inner">
-          <strong>Two-Factor Authentication will become mandatory soon</strong><br>Take a moment to get
-          prepared by <a class="underline" href="#" onclick="openOverlay(); return false;"> learning more about the
-            setup</a>
-        </div>
-      </div>
       <div class="main-wrapper">
         <div class="brand-wrapper">
           <!-- Brand -->
@@ -65,84 +58,13 @@
               <div class="pw-reset">
                 <a href="#">Forgot Password?</a>
               </div>
-              <button type="submit">Login</button>
+              <button type="button" onclick="window.location.href='2fa__option.html'">Login</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- message overlay -->
-  <div id="overlay" class="overlay hidden">
-    <div class="overlay-inner">
-      <div class="overlay-content">
-        <h1>Upcoming Login Changes & Email Verification</h1>
-        <p>
-          We are planning to enhance our login process in the near future with additional security measures, including
-          two-factor authentication (2FA). Although the 2FA functionality is not yet available, we need your
-          assistance
-          to
-          ensure a smooth transition when these changes are implemented.
-        </p>
-
-        <h2>Action Required:</h2>
-        <ul>
-          <li>
-            <strong>Verify Your Email Address:</strong> Please confirm with your station manager that your current
-            email
-            address
-            is correct and up-to-date. This verification is crucial to ensure you continue to have access to your
-            account when
-            the new login process is introduced.
-          </li>
-        </ul>
-
-        <h2>What to Expect:</h2>
-        <ul>
-          <li>The new security features, including 2FA, will be coming soon.</li>
-          <li>Detailed instructions and additional information will be provided at a later date.</li>
-          <li>Keeping your email information current now will help you avoid any disruptions during the transition.
-          </li>
-        </ul>
-        <p>We appreciate your cooperation and understanding as we work to enhance the security of our login process.
-      </div>
-    </div>
-    <button class="close-button">
-      <span id="close" class="material-symbols-outlined">close</span>
-    </button>
-  </div>
-
-  <!-- JavaScript functions -->
-  <script>
-    // Function to open the overlay
-    function openOverlay() {
-      const overlay = document.querySelector('.overlay');
-      if (overlay) {
-        overlay.classList.remove('hidden');
-        overlay.classList.add('flex');
-      }
-    }
-
-    // Function to close the overlay
-    function closeOverlay() {
-      const overlay = document.querySelector('.overlay');
-      if (overlay) {
-        overlay.classList.add('hidden');
-        overlay.classList.remove('flex');
-      }
-    }
-
-    // Add event listener to the close button when the DOM is loaded
-    document.addEventListener('DOMContentLoaded', () => {
-      const closeButton = document.getElementById('close');
-      if (closeButton) {
-        closeButton.addEventListener('click', closeOverlay);
-      }
-    });
-
-  </script>
-
 </body>
 
 </html>
