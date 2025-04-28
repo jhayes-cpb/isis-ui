@@ -208,7 +208,7 @@ button[type="button"] {
   }
 
   a {
-    @apply text-gray-700 dark:text-gray-200;
+    @apply text-gray-700 dark:text-gray-200 underline hover:text-blue-500;
   }
 
   .step1-button,
