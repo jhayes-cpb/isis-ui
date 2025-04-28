@@ -180,15 +180,15 @@ button[type="button"] {
   @apply container max-w-5xl mx-auto p-5 sm:p-10;
 
   h1 {
-    @apply text-4xl text-gray-700 dark:text-gray-200 mb-3.5;
+    @apply text-4xl text-sky-700 dark:text-gray-200 mb-3.5;
   }
 
   h2 {
-    @apply text-2xl text-gray-700 dark:text-gray-200 font-bold mb-3.5 border-b-2 border-gray-200 dark:border-gray-500 pb-2;
+    @apply text-2xl text-sky-700 dark:text-gray-200 font-bold mb-3.5 border-b-2 border-gray-200 dark:border-gray-500 pb-2;
   }
 
   h3 {
-    @apply text-lg text-gray-700 dark:text-gray-200;
+    @apply text-lg text-sky-700 dark:text-gray-200;
   }
 
   p {
