@@ -1231,6 +1231,10 @@ button[type="button"] {
       color: var(--color-gray-200);
     }
   }
+  .form-item {
+    margin-bottom: calc(var(--spacing) * 4);
+    max-width: var(--container-lg);
+  }
 }
 @layer utilities {
   @keyframes shimmer {

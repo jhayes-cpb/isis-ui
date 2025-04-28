@@ -219,6 +219,10 @@ button[type="button"] {
   ol {
     @apply list-decimal list-inside text-gray-700 dark:text-gray-200 ml-4;
   }
+
+  .form-item {
+    @apply max-w-lg mb-4;
+  }
 }
 
 @layer utilities {
