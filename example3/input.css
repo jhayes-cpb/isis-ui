@@ -27,10 +27,34 @@
   @apply flex flex-col justify-center items-center md:h-screen p-5 sm:p-10;
 
   .message {
-    @apply flex-col justify-center items-center w-full mb-5;
+    @apply flex flex-col justify-center items-center w-full mb-5;
 
     .message-inner {
-      @apply bg-sky-200 text-sky-800 p-4 rounded-none md:rounded-lg mb-4 text-center;
+      @apply bg-sky-200 text-sky-800 p-4 mb-4 rounded-none md:rounded-lg text-center w-full;
+    }
+
+    &.message--success {
+      .message-inner {
+        @apply bg-green-200 text-green-800;
+      }
+    }
+
+    &.message--warning {
+      .message-inner {
+        @apply bg-yellow-200 text-yellow-800;
+      }
+    }
+
+    &.message--notice {
+      .message-inner {
+        @apply bg-gray-200 text-gray-800;
+      }
+    }
+
+    &.message--danger {
+      .message-inner {
+        @apply bg-red-200 text-red-800;
+      }
     }
   }
 }
