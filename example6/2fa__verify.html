@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200”
+    rel=" stylesheet" />
+  <title>Two-Factor Authentication | ISIS | Integrated Station Information System</title>
+</head>
+
+<body class="verify">
+  <div class="wrapper">
+    <div class="wrapper-inner">
+      <div class="main-wrapper">
+        <div class="brand-wrapper">
+          <!-- Brand -->
+          <div class="brand">
+            <div class="brand-logo"><a href="index.html"><img class="logo" src="../logo.png" /></a></div>
+            <div class="brand-name">
+              <h1>ISIS</h1>
+              <h2>Intergrated Station</h2>
+              <h2>Information System</h2>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <div class="twofa-container">
+            <h3>Two-Factor Authentication</h3>
+            <form action="end.html" method="POST" class="twofa-form">
+              <div>
+                <label for="auth-code" class="twofa-label">
+                  Authentication code
+                  <span title="Enter the 6-digit code from your authenticator app" class="help-icon">?</span>
+                </label>
+                <input id="auth-code" name="auth-code" type="text" maxlength="6" autocomplete="off" required
+                  placeholder="XXXXXX" class="twofa-input" />
+              </div>
+
+              <button type="button" onclick="window.location.href='end.html'" class="button-margin">
+                Verify
+              </button>
+            </form>
+
+            <p class="twofa-help-text">
+              Open your two-factor authenticator (TOTP) app or browser extension to view your authentication
+              code.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>

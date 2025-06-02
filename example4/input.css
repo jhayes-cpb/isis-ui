@@ -249,6 +249,79 @@ button[type="button"] {
   }
 }
 
+/* 2FA Verification Page Styles */
+/* .twofa-container {
+  @apply max-w-xs mx-auto bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md p-6 mt-6;
+} */
+
+.twofa-icon {
+  @apply flex justify-center mb-4;
+}
+
+.twofa-icon .material-symbols-outlined {
+  @apply text-4xl text-gray-500;
+}
+
+.twofa-form {
+  @apply space-y-6;
+}
+
+.twofa-label {
+  @apply block text-sm font-medium text-gray-700 dark:text-gray-300;
+}
+
+.twofa-label .help-icon {
+  @apply text-gray-400;
+}
+
+.twofa-input {
+  @apply mt-1 block w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-md shadow-sm p-2;
+}
+
+.twofa-verify-btn {
+  @apply bg-sky-600 hover:bg-blue-700 cursor-pointer text-white font-semibold rounded-md py-2 px-4 w-full;
+}
+
+.twofa-help-text {
+  @apply mt-4 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.twofa-problems {
+  @apply max-w-md mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md p-6 mt-8;
+}
+
+.twofa-problems h2 {
+  @apply text-gray-900 dark:text-gray-100 font-semibold mb-2 text-lg border-none pb-0;
+}
+
+.twofa-problems ul {
+  @apply list-disc list-inside text-sm text-gray-600 dark:text-gray-400;
+}
+
+.twofa-problems a {
+  @apply text-blue-600 hover:underline;
+}
+
+.verify {
+  .main-wrapper {
+    @apply flex-col w-full;
+
+    .brand-wrapper,
+    .form-wrapper {
+      @apply w-full;
+    }
+  }
+
+  .wrapper {
+    @apply max-w-xl mx-auto bg-white border border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-md p-6 mt-40;
+  }
+
+  .wrapper-inner {
+    @apply h-auto sm:p-0;
+  }
+}
+
+
 @layer utilities {
   @keyframes shimmer {
     0% {
